@@ -13,12 +13,12 @@
   ],
   "scripts": {
     "build": "tsc",
-    "dev": "tsx src/index.ts",
-    "start": "node dist/index.js",
+    "dev": "bun run src/index.ts",
+    "start": "bun run dist/index.js",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "npm run build",
-    "postinstall": "echo '\\n  de-agent installed! Run: de-agent --help\\n'",
-    "test": "tsx --test tests/**/*.test.ts"
+    "test": "bun test tests/**/*.test.ts",
+    "prepublishOnly": "bun run build",
+    "postinstall": "echo '\\n  de-agent installed! Run: de-agent --help\\n'"
   },
   "keywords": [
     "ai",
