@@ -1,0 +1,49 @@
+{
+  "name": "de-agent",
+  "version": "0.1.0",
+  "description": "AI Coding Agent - A Claude Code inspired terminal AI assistant",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "de-agent": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "postinstall": "echo '\\n  de-agent installed! Run: de-agent --help\\n'",
+    "test": "tsx --test tests/**/*.test.ts"
+  },
+  "keywords": [
+    "ai",
+    "coding-agent",
+    "cli",
+    "llm",
+    "openai",
+    "claude",
+    "deepseek",
+    "terminal"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "openai": "^4.0.0",
+    "ora": "^8.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
